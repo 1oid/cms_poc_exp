@@ -54,3 +54,7 @@ class Exploit:
             return "{} has SQL Injection!".format(true_url)
 ```
 
+
+## 本项目目前支持/贡献的人
+1 [1oid(作者)](https://github.com/1oid)
+
