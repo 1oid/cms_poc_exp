@@ -1,4 +1,3 @@
-# coding:utf-8
 # 常规web目录扫描
 import requests
 
