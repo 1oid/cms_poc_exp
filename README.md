@@ -26,3 +26,10 @@ ___
   - [网站扫描插件_其他通用漏洞](https://github.com/1oid/cms_poc_exp/tree/master/www)
   - [yonyouoa](https://github.com/1oid/cms_poc_exp/tree/master/yongyouoa)
   - [zfsoft](https://github.com/1oid/cms_poc_exp/tree/master/zfsoft)
+
++ 插件编写格式,
+```python
+class Exploit:
+  def attack(self, url):
+    return "返回字符串"
+```
