@@ -35,6 +35,7 @@ class Exploit:
     # 这里写验证漏洞的一些代码
     return "返回(提示)字符串"
 ```
+调用 `Exploit().attack(url)`
 
 以`metinfo_login_lang_sql`插件为例
 ```python
