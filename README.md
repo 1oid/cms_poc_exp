@@ -1,5 +1,16 @@
 # cms_poc_exp
 ___
+
+## 次项目的目的与意义
+> 个人精力有限,故公开此项目让感兴趣的人一起搜集插件为自己/作者扫描器提供强力的驱动
+> 如果感兴趣为本项目提供支持,可以联系本人QQ2563152103
+
+
++ 项目说明
+  - 本项目插件现已支持Python3 不再兼容Python2,故若要使用 [ShellFrameworkd](https://github.com/1oid/Shell-Frameworkd)
+  进行批量扫描,请自行修改插件支持Python2
+  - [ShellFrameworkd](https://github.com/1oid/Shell-Frameworkd)批量扫描将会再之后修改为支持Python3
+
 + 现有的cms插件
   - [dedecms](https://github.com/1oid/cms_poc_exp/tree/master/dedecms)
   - [discuz](https://github.com/1oid/cms_poc_exp/tree/master/discuz)
