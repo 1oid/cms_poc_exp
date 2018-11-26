@@ -55,6 +55,11 @@ class Exploit:
             return "{} has SQL Injection!".format(true_url)
 ```
 
+## 插件编写注意事项
++ 拒绝重复插件, 新增了一个`find.py`, 通过特征来搜索已存在的脚本是否含有指定特征
+使用方法: 
+  - 方法一: `python3 find.py cms名称 特征` 例如 `python3 find.py dedecms /install/index.php`
+  - 方法二: `python3 find.py 特征` 例如 `python3 find.py /install/index.php` (如果不指定cms, 则会查找本地所有的插件)
 
 ## 本项目目前支持/贡献的人
 - [1oid(作者)](https://github.com/1oid)
