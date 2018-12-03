@@ -30,6 +30,7 @@ ___
   - [zfsoft](https://github.com/1oid/cms_poc_exp/tree/master/zfsoft)
   - [jetty](https://github.com/1oid/cms_poc_exp/tree/master/jetty)
   - [ecshop](https://github.com/1oid/cms_poc_exp/tree/master/ecshop)
+  - [74cms](https://github.com/1oid/cms_poc_exp/tree/master/74cms)
 
 + 插件编写格式,
 ```python
