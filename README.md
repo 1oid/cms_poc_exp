@@ -59,7 +59,7 @@ class Exploit:
         if 'not have this language' in response2.text and 'not have this language' not in response.text:
             return "{} has SQL Injection!".format(true_url)
 ```
-11
+
 ## 插件编写注意事项
 + 拒绝重复插件, 新增了一个`find.py`, 通过特征来搜索已存在的脚本是否含有指定特征
 使用方法: 
