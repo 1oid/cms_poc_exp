@@ -70,4 +70,4 @@ class Exploit:
 - [1oid(作者)](https://github.com/1oid)
 - [ske](https://github.com/SkewwG/)提供自己编写的插件[VulScan](https://github.com/SkewwG/VulScan)
 - [LiodAir](https://github.com/LiodAir)提交分支
-- `icetea` 提交新的cms和poc
+- [icetea1](https://github.com/icetea1) 提交新的cms和poc
