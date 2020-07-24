@@ -13,6 +13,32 @@ ___
   - ~~[ShellFrameworkd](https://github.com/1oid/Shell-Frameworkd)批量扫描将会再之后修改为支持Python3~~
   - `ShellFrameworkd`已更名为[PocBatch-M](https://github.com/1oid/PocBatch-M)并支持了Python3
 
++ 使用说明
+`python3 scan.py -u "http://43.*.*.*" -c dedecms`
+```
+[*] Load Plugin dedecms_info_ver_txt.py
+[Success!!!] TimeStamp: 20170405, Possible Version: V5.7SP1
+[*] Load Plugin dedecms_sql_search_php.py
+[-] Execute Fail!
+[*] Load Plugin dedecms_sql_guestbook_php.py
+[-] Execute Fail!
+[*] Load Plugin dedecms_sql_download_2.py
+[-] Execute Fail!
+[*] Load Plugin dedecms_info_mysqli_error_inc.py
+[Success!!!] dedecms error info:http://43.*.*.*/data/mysqli_error_trace.inc
+[*] Load Plugin dede_backup_short_name.py
+[-] Execute Fail!
+[*] Load Plugin dedecms_getshell_install_php.py
+[-] Execute Fail!
+[*] Load Plugin dedecms_info_mysql_error_inc.py
+[Success!!!] http://43.*.*.*/data/mysql_error_trace.inc
+[*] Load Plugin dedecms_sql_recmomend_php.py
+[-] Execute Fail!
+[*] Load Plugin dedecms_redirect_download_php.py
+```
+
+
+
 + 现有的cms插件
   - [dedecms](https://github.com/1oid/cms_poc_exp/tree/master/dedecms)
   - [discuz](https://github.com/1oid/cms_poc_exp/tree/master/discuz)
