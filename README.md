@@ -12,6 +12,7 @@ ___
   进行批量扫描,请自行修改插件支持Python2~~
   - ~~[ShellFrameworkd](https://github.com/1oid/Shell-Frameworkd)批量扫描将会再之后修改为支持Python3~~
   - `ShellFrameworkd`已更名为[PocBatch-M](https://github.com/1oid/PocBatch-M)并支持了Python3
+  - `扫描器版本` [访问扫描器版本](https://github.com/1oid/cms_poc_exp/tree/dev)
 
 + 现有的cms插件
   - [dedecms](https://github.com/1oid/cms_poc_exp/tree/master/dedecms)
