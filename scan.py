@@ -40,26 +40,19 @@ def cmdparse(url, urls, cms, all=None):
     else:
         pass
 
-    if all == None:
+    if not all:
         if cms in list(expFolders):
             for _url in urlList:
                 scan(cms, _url)
         else:
             print("[??] CMS Not Exist!")
-
-    elif all == 'all':
+    else:
         for expfolder in expFolders:
             for _url in urlList:
                 try:
                     scan(expfolder, _url)
                 except Exception as e:
                     print(e)
-
-    else:
-        print(col.OutputRed("[!!!]Bad -a/--all"))
-
-# cms = 'phpcms'
-# url = 'http://www.unifunds.cn/'
 
 
 if __name__ == '__main__':
@@ -70,7 +63,7 @@ if __name__ == '__main__':
     parser.add_option("-u", "--url", dest="url", help="Url Link", default=None)
     parser.add_option("-m", "--urls", dest="urls", help="Url Links", default=None)
     parser.add_option("-c", "--cms", dest='cms', help="Cms Name", default=None)
-    parser.add_option("-a", "--all", dest='all', help="All Cms Plugin Load", default=None)
+    parser.add_option("-a", "--all", dest='all', action="store_true", help="All Cms Plugin Load")
     options, args = parser.parse_args()
 
     cmdparse(options.url, options.urls, options.cms, options.all)
