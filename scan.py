@@ -1,6 +1,6 @@
 # coding:utf-8
 # __author__ : Loid
-
+import pocsuite3
 from libs.func import *
 
 ini = fileOperation()

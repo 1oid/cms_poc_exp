@@ -5,8 +5,12 @@
 import os
 import re
 import sys
+
 import requests
 from libs.colors import *
+import inspect
+
+from pocsuite3.lib.core.poc import POCBase
 
 col = Color()
 
@@ -39,8 +43,21 @@ class fileOperation(object):
     def executePlugin(self, expName, url):
         md = __import__(expName)
         try:
-        # if True:
-            if hasattr(md, 'Exploit'):
+            if hasattr(md, 'register_poc'):
+                for _class_name, _class in inspect.getmembers(md, inspect.isclass):
+                    if _class_name != "POCBase" and inspect.getmro(_class)[1].__name__ == 'POCBase':
+                        # print(_class_name)
+                        exp = getattr(md, _class_name)()
+                        ret = exp.execute(url, mode='verify')
+
+                        if ret:
+                            output = ret.to_dict()
+                            print(col.OutputGreen(output))
+
+                # print(inspect.getmembers(md, inspect.isclass))
+                # print(dir(md))
+                # print(hasattr(md, 'register_poc'))
+            elif hasattr(md, 'Exploit'):
                 exp = getattr(md, 'Exploit')()
                 ret = exp.attack(url)
                 if ret:
