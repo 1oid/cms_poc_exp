@@ -1,11 +1,11 @@
-# cms_poc_exp (扫描版本)
+# cms_poc_exp (扫描版本、兼容pocsuite3插件调用)
 ![](https://img.shields.io/badge/program-Python3-blue.svg)
 ___
 
 ## 此项目的目的与意义
 > 个人精力有限,故公开此项目让感兴趣的人一起搜集插件为自己/作者扫描器提供强力的驱动
 > 如果感兴趣为本项目提供支持,可以联系本人QQ2563152103
-
+> 更新pocsuite3插件调用 20211116
 
 + 项目说明
   - ~~本项目插件现已支持Python3 不再兼容Python2,故若要使用 [ShellFrameworkd](https://github.com/1oid/Shell-Frameworkd)
