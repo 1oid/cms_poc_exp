@@ -7,8 +7,8 @@ __copyright__ = 'Copyright 2018 Knownsec'
 __name__ = 'pocsuite3'
 __package__ = 'pocsuite3'
 
-from .lib.core.common import set_paths
-from .cli import module_path
+from pocsuite3.lib.core.common import set_paths
+from pocsuite3.cli import module_path
 
 
 set_paths(module_path())
