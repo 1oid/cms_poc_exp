@@ -53,7 +53,7 @@ class fileOperation(object):
                         output = ret.to_dict()
 
                         if output and output['error_msg'][0] == 0:
-                            if output['error_msg'][1] == "not vulnerability":
+                            if output['error_msg'][1] == "not vulnerability" or output['error_msg'][1] != "None":
                                 print(col.OutputRed("not vulnerability"))
                             else:
                                 for output_verify_key, output_verify_value in output['result']['VerifyInfo'].items():
