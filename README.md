@@ -1,4 +1,4 @@
-# cms_poc_exp
+# cms_poc_exp(新增支持Pocsuite3插件)
 ![](https://img.shields.io/badge/program-Python3-blue.svg)
 ___
 
@@ -13,7 +13,7 @@ ___
   - ~~[ShellFrameworkd](https://github.com/1oid/Shell-Frameworkd)批量扫描将会再之后修改为支持Python3~~
   - `ShellFrameworkd`已更名为[PocBatch-M](https://github.com/1oid/PocBatch-M)并支持了Python3
   - `扫描器版本` [访问扫描器版本](https://github.com/1oid/cms_poc_exp/tree/dev)
-
+  - 20201116 新增pocsuite支持，更新一部分插件
 + 现有的cms插件
   - [dedecms](https://github.com/1oid/cms_poc_exp/tree/master/dedecms)
   - [discuz](https://github.com/1oid/cms_poc_exp/tree/master/discuz)
