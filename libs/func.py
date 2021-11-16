@@ -38,7 +38,7 @@ class fileOperation(object):
     def exploitScriptsList(self, filen):
         filename = "{}/exploits/{}".format(os.getcwd(), filen)
         fileList = os.listdir(filename)
-        return filename, filter(lambda x: (True, False)[x[:2] == '__' or x[-3:] == 'pyc'], fileList)
+        return filename, filter(lambda x: (True, False)[x[:2] == '__' or x[-3:] == 'pyc' or x[0] == '.'], fileList)
 
     def executePlugin(self, expName, url):
         md = __import__(expName)
