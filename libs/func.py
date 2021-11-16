@@ -56,7 +56,10 @@ class fileOperation(object):
                             if output['error_msg'][1] == "not vulnerability":
                                 print(col.OutputRed("not vulnerability"))
                             else:
-                                print(col.OutputGreen(output))
+                                for output_verify_key, output_verify_value in output['result']['VerifyInfo'].items():
+                                    print(col.OutputGreen(output_verify_key + ": " + output_verify_value))
+                                print(col.OutputGreen(output['name']))
+                                print(col.OutputGreen(output['poc_attrs']['desc'].strip()))
                         else:
                             print(col.OutputRed(output['error_msg'][1]))
 
