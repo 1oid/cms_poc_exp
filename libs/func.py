@@ -74,6 +74,8 @@ class fileOperation(object):
             print('[!] MissingScheme.')
         except requests.exceptions.ConnectionError as e:
             print("[!] ConnectionError")
+        except Exception as e:
+            print("[-] {}".format(e))
 
     def setpath(self, cmsfile):
         sys.path.append(cmsfile)
