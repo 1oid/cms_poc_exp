@@ -50,9 +50,12 @@ class fileOperation(object):
                         exp = getattr(md, _class_name)()
                         ret = exp.execute(url, mode='verify')
 
-                        if ret:
-                            output = ret.to_dict()
+                        output = ret.to_dict()
+
+                        if output and output['error_msg'][0] == 0:
                             print(col.OutputGreen(output))
+                        else:
+                            print(col.OutputRed(output['error_msg'][1]))
 
                 # print(inspect.getmembers(md, inspect.isclass))
                 # print(dir(md))
@@ -69,6 +72,8 @@ class fileOperation(object):
         #
         except requests.exceptions.MissingSchema as e:
             print('[!] MissingScheme.')
+        except requests.exceptions.ConnectionError as e:
+            print("[!] ConnectionError")
 
     def setpath(self, cmsfile):
         sys.path.append(cmsfile)
