@@ -36,25 +36,25 @@ class Output(object):
     @staticmethod
     def log_error(string, label="[ERROR]"):
         print(
-            Output.color(Color.RED, "{} {}".format(label, string))
+            Output.color(Color.RED, "{}{}".format(label, string))
         )
 
     @staticmethod
     def log_info(string, label="[INFO]"):
         print(
-            Output.color(Color.BLUE, "{} {}".format(label, string))
+            Output.color(Color.BLUE, "{}{}".format(label, string))
         )
 
     @staticmethod
     def log_success(string, label="[SUCCESS]"):
         print(
-            Output.color(Color.GREEN, "{} {}".format(label, string))
+            Output.color(Color.GREEN, "{}{}".format(label, string))
         )
 
     @staticmethod
     def log_warning(string, label="[WARNING]"):
         print(
-            Output.color(Color.YELLOW, "{} {}".format(label, string))
+            Output.color(Color.YELLOW, "{}{}".format(label, string))
         )
 
 
@@ -92,14 +92,14 @@ class Module(object):
 
                 if output and output['error_msg'][0] == 0:
                     if output['error_msg'][1] == "not vulnerability" or output['error_msg'][1] != "None":
-                        Output.log_warning("check {} not vulnerability".format(pocscript), label="[NOT]")
+                        Output.log_warning("check {} not vulnerability".format(pocscript), label="[NOT] ")
                     else:
                         for output_verify_key, output_verify_value in output['result']['VerifyInfo'].items():
                             # print(col.OutputGreen())
-                            Output.log_success(output_verify_key + ": " + output_verify_value, label="[FIND]")
+                            Output.log_success(output_verify_key + ": " + output_verify_value, label="[FIND] ")
 
-                        Output.log_success("{} {}".format(pocscript, output['name']), label="[FIND]")
-                        Output.log_success(output['poc_attrs']['desc'].strip(), label="[FIND]")
+                        Output.log_success("[{}] {}".format(pocscript, output['name']), label="[FIND]")
+                        Output.log_success(output['poc_attrs']['desc'].strip(), label="[FIND] ")
                 else:
                     Output.log_error(output['error_msg'][1])
 
@@ -109,9 +109,9 @@ class Module(object):
         ret = poctest.attack(url)
 
         if ret:
-            Output.log_success("{} {}".format(pocscript, ret), label="[FIND]")
+            Output.log_success("[{}] {}".format(pocscript, ret), label="[FIND]")
         else:
-            Output.log_warning("check {} not vulnerability".format(pocscript), label="[NOT]")
+            Output.log_warning("check {} not vulnerability".format(pocscript), label="[NOT] ")
 
 
 class Folder(object):
