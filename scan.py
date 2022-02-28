@@ -18,11 +18,11 @@ class Runner(object):
         1. load exploit folders
         """
         self.folders = list(Folder.get_folders(os.path.join(Module.get_abs_path(), "exploits")))
-        Output.log_info("loaded exploits folder {}".format(len(self.folders)))
+        Output.log_info(" loaded exploits folder {}".format(len(self.folders)))
 
     def init_exploit_scripts(self, path):
         scripts = list(Folder.get_folders(os.path.join(Module.get_abs_path(), "exploits", path)))
-        Output.log_info("loaded {} plugins for {}".format(len(scripts), path))
+        Output.log_info(" loaded {} plugins for {}".format(len(scripts), path))
         return scripts
 
     def check(self, url, cms, script=None):
@@ -30,7 +30,7 @@ class Runner(object):
         Module.set_path(os.path.join(Module.get_abs_path(), "exploits", cms))
 
         scripts = self.init_exploit_scripts(cms)
-        Output.log_info("checking {}".format(url))
+        Output.log_info(" checking {}".format(url))
 
         if script:
             scripts = [script]
