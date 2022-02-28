@@ -98,7 +98,7 @@ class Module(object):
                             # print(col.OutputGreen())
                             Output.log_success(output_verify_key + ": " + output_verify_value, label="[FIND]")
 
-                        Output.log_success(output['name'], label="[FIND]")
+                        Output.log_success("{} {}".format(pocscript, output['name']), label="[FIND]")
                         Output.log_success(output['poc_attrs']['desc'].strip(), label="[FIND]")
                 else:
                     Output.log_error(output['error_msg'][1])
@@ -109,7 +109,7 @@ class Module(object):
         ret = poctest.attack(url)
 
         if ret:
-            Output.log_success(ret, label="[FIND]")
+            Output.log_success("{} {}".format(pocscript, ret), label="[FIND]")
         else:
             Output.log_warning("check {} not vulnerability".format(pocscript), label="[NOT]")
 
