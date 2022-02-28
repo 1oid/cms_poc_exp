@@ -11,6 +11,8 @@ from libs.colors import *
 import inspect
 
 from pocsuite3.lib.core.poc import POCBase
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 col = Color()
 
@@ -66,8 +68,13 @@ class fileOperation(object):
                 # print(inspect.getmembers(md, inspect.isclass))
                 # print(dir(md))
                 # print(hasattr(md, 'register_poc'))
+
+            # 判断是否有Exploit属性（这里指是否有Exploit类）
             elif hasattr(md, 'Exploit'):
+
+                # 获取 Exploit类，并进行实例化
                 exp = getattr(md, 'Exploit')()
+                # 调用Exploit()的attack
                 ret = exp.attack(url)
                 if ret:
                     output = '[Success!!!] {}'.format(ret)
@@ -79,7 +86,7 @@ class fileOperation(object):
         except requests.exceptions.MissingSchema as e:
             print('[!] MissingScheme.')
         except requests.exceptions.ConnectionError as e:
-            print("[!] ConnectionError")
+            print("[!] ConnectionError, {}".format(e))
         except Exception as e:
             print("[-] {}".format(e))
 
